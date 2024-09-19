@@ -1,0 +1,6 @@
+<h3>Pedidos listos para entregar</h3>
+<ul>
+@for (pedidoListo of pedidosListosParaEnviar; track pedidoListo) {
+    <li>{{pedidoListo.id}} -{{pedidoListo.name}} <button (click)="entregarPedido()">Entregar!</button></li>
+}
+</ul>

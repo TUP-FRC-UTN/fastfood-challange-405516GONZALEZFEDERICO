@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Restaurant Fast Food</h1>
+    <p>Pedidos Ingresados</p>
+    <div>
+        <ul>
+            @for (pedido of pedidosIngresados; track pedido) {          
+            <p>Solicitante:{{pedido.name}}, Pedido: {{pedido.description}}, Pedido Id:{{pedido.id}}</p>        
+            }
+        </ul>
+    </div>
+   <app-delivery-point></app-delivery-point>
+   <app-pos></app-pos>
+
+    <app-kitchen></app-kitchen>
+</div>

@@ -1,0 +1,21 @@
+<h3>Componente cocina</h3>
+
+<h5>Pendiente de cocinar</h5>
+<ul>
+    @for (pedido of pedidosIngresados; track pedido) {
+        
+            <li>
+                ({{pedido.id}}) - {{pedido.description}} 
+                <button (click)="enviarACoccion(pedido)" [disabled]="pedidoCoccion">Cocinar</button>
+            </li>
+        
+    }
+</ul>
+
+<h5>En cocción</h5>
+@if (pedidoCoccion) {
+    <li>({{pedidoCoccion.id}}) {{pedidoCoccion.name}} - {{pedidoCoccion.description}}</li>
+    <button (click)="quitarDePendientes(pedidoCoccion)">Pedido terminado!</button>
+} @else {
+    <li>No hay pedidos en cocción</li>
+}
