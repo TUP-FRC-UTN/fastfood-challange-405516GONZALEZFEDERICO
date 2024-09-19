@@ -20,7 +20,7 @@ En este ejercicio podrán hacer uso de Input, Output, if, for, comunicación ent
 
 ## Puntos Técnicos
 
-Clase Pedido:
+Clase Pedido
 ```
 {
     number: number; // Numero de pedido random de 1 a 1000
